@@ -1,2 +1,2 @@
 # website
-GitHub personal website
+Just a GitHub personal website for UX/UI experiments.
