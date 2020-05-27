@@ -19,7 +19,7 @@
   </header>
   <section data-pswp>
     <ul>
-      <li><a href="images/img01.jpg" target="_blank" data-caption="Cats have cool eyes." data-author="Photo by pixabay.com" class="pswp--item"><img src="images/img01-thumb.jpg" /></a></li>
+      <li><a href="images/img01.jpg" target="_blank" data-caption="Cats have cool eyes." data-author="Photo by pixabay.com" data-pswp-index="0" class="pswp--item"><img src="images/img01-thumb.jpg" /></a></li>
       <li><a href="images/img02.jpg" target="_blank" data-caption="Cute red cat is hiding." data-author="Photo by pixabay.com"><img src="images/img02-thumb.jpg" /></a></li>
       <li><a href="images/img03.jpg" target="_blank" data-caption="Grey cat with orange eyes." data-author="Photo by pixabay.com"><img src="images/img03-thumb.jpg" /></a></li>
       <li><a href="images/img04.jpg" target="_blank" data-caption="Tabby cats are great." data-author="Photo by pixabay.com"><img src="images/img04-thumb.jpg" /></a></li>
@@ -36,7 +36,16 @@
     <script src="_packages/photoswipe/photoswipe-ui-default.min.js" charset="utf-8"></script>
     <script src="_packages/photoswipe-simplify/js/photoswipe-simplify.min.js" charset="utf-8"></script>
     <script charset="utf-8">
-      photoswipeSimplify.init();
+      photoswipeSimplify.init({
+                    history: false,
+                    bgOpacity: .7,
+                    zoomEl: false,
+                    shareEl: false,
+                    fullscreenEl: false,
+                    closeEl: false,
+                        captionEl: false,
+                        barsSize: {top:44, bottom:44}
+                 });
     </script>
   </body>
 </html>
