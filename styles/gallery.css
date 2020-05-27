@@ -16,6 +16,7 @@ body {
   margin-bottom: 3rem;
 }
 h1 {
+  font-family: "system", sans-serif;
   font-size: 2rem;
   color: #fff;
   margin: 0;
