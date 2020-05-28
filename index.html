@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="styles/photoswipe.css">
   <link rel="stylesheet" href="styles/default-skin.css">
   <link rel="stylesheet" href="styles/gallery.css">
+  
+  <script src="js/lazyload.min.js"></script>
 </head>
 
 <body>
@@ -32,9 +34,9 @@
   </main>
 
   <!-- PhotoSwipe & Photoswipe Simplify -->
-    <script src="js/photoswipe.js" charset="utf-8"></script>
-    <script src="js/photoswipe-ui-default.js" charset="utf-8"></script>
-    <script src="js/photoswipe-simplify.js" charset="utf-8"></script>
+    <script src="js/photoswipe.min.js" charset="utf-8"></script>
+    <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
+    <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
     <script charset="utf-8">
       photoswipeSimplify.init({
                     history: false,
@@ -43,9 +45,17 @@
                     shareEl: false,
                     fullscreenEl: false,
                     closeEl: false,
-                        captionEl: false,
+                        captionEl: true,
                         barsSize: {top:44, bottom:44}
                  });
+                 
+            var lazyLoadInstance = new LazyLoad({
+                elements_selector: "img"
+                });
+ 
+                var lazyiFrame = new LazyLoad({
+                    elements_selector: "iframe"
+                });
     </script>
   </body>
 </html>
