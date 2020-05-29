@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+
+/* Overrides */
+.pswp__top-bar { background-color: transparent; }
+
 /* Define the "system" font family */
 @font-face {
   font-family: system;
@@ -8,6 +12,8 @@
   font-weight: 300;
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
+
+/* Basic Structure */
 html {
   font-family: "system", sans-serif;
   font-size: 18px;
@@ -29,6 +35,33 @@ h1 {
   padding: 0.75em 0.25em;
   line-height: 1.1em;
 }
+
+/* Wave Background */
+@keyframes wave {
+	0% {
+		transform: translateX(-50%) skew(0deg, -8deg);
+	}
+
+	100% {
+		transform: translateX(-30%) skew(8deg, -4deg);
+	}
+}
+.wave-bg::before {
+	content: "";
+	display: block;
+	position: fixed;
+	width: 300%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	border-radius: 100%;
+	transform: translateX(-50%) skewY(-8deg);
+	background-color: #d1d1d1;
+	z-index: -1;
+	animation: wave 8s ease-in-out infinite alternate;
+}
+
+/* Styles */
 ul {
   columns: 200px;
   break-inside: avoid;
@@ -50,4 +83,3 @@ img {
   border-radius: 5px;
   background-color: #ddd;
 }
-.pswp__top-bar { background-color: transparent; }
