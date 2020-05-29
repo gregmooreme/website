@@ -50,3 +50,4 @@ img {
   border-radius: 5px;
   background-color: #ddd;
 }
+.pswp__top-bar { background-color: none; }
