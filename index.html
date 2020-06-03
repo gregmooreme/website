@@ -6,23 +6,28 @@
 	<meta name="description" content="Photo gallery made with CSS Grid and PhotoSwipe">
     <meta name="keywords" content="css,grid,photography">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/photoswipe.css">
-  <link rel="stylesheet" href="styles/default-skin.css">
-  <link rel="stylesheet" href="styles/gallery.css">
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="styles/global.css">
+  <!-- Photoswipe Styles -->
+  <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
+  <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
 </head>
 
 <body>
-  <div class="parallax-block">
-	<img src="https://unsplash.it/1920/1920/?image=176" data-speed="2" class="img-parallax">
-	<h2>CSS Grid Gallery</h2>
-  </div>
-	
-  <main>
-  <header>
+
+<!-- #include virtual="nav.html" -->
+
+<main>
+<header>
+	<h2>Test Page</h2>
+</header>
+
+<section>
     <h1>Cats</h1>
-  </header>
-  <section data-pswp>
+    <p>This is a test page for combining a simple CSS Grid layout with PhotoSwipe. The goal isn't to win design awards but to make for a simple, pleasurable browsing exprience. More features and design will be added as I play.</p>
+</section>
+
+<section data-pswp>
     <ul>
       <li><a href="images/img01.jpg" target="_blank" data-caption="Cats have cool eyes." data-author="Photo by pixabay.com"><img src="images/img01-thumb.jpg" /></a></li>
       <li><a href="images/img02.jpg" target="_blank" data-caption="Cute red cat is hiding." data-author="Photo by pixabay.com"><img src="images/img02-thumb.jpg" /></a></li>
@@ -33,39 +38,88 @@
       <li><a href="images/img07.jpg" target="_blank" data-caption="Cozy cat looks out." data-author="Photo by pixabay.com"><img src="images/img07-thumb.jpg" /></a></li>
       <li><a href="images/img08.jpg" target="_blank" data-caption="Kittens want to play." data-author="Photo by pixabay.com"><img src="images/img08-thumb.jpg" /></a></li>
     </ul>
-    </section>
-    <p>This is a test page for combining a simple CSS Grid layout with PhotoSwipe. The goal isn't to win design awards but to make for a simple, pleasurable browsing exprience. More features and design will be added as I play.</p>
-  </main>
+</section>
 
-  <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <!-- Lazy Load -->
-    <script src="js/lazyload.min.js"></script>
-  <!-- Parallax -->
-    <script src="js/parallax.js"></script>
-  <!-- PhotoSwipe & Photoswipe Simplify -->
-    <script src="js/photoswipe.min.js" charset="utf-8"></script>
-    <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
-    <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
-    <script charset="utf-8">
-      photoswipeSimplify.init({
-                    history: false,
-                    bgOpacity: .7,
-                    zoomEl: false,
-                    shareEl: false,
-                    fullscreenEl: false,
-                    closeEl: false,
-                        captionEl: false,
-                        barsSize: {top:44, bottom:44}
-                 });
-                 
-            var lazyLoadInstance = new LazyLoad({
-                elements_selector: "img"
+<section>
+    <p>Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. Accumsan tortor posuere ac ut consequat. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Proin libero nunc consequat interdum varius sit amet mattis. In iaculis nunc sed augue lacus. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Neque aliquam vestibulum morbi blandit cursus risus at. Suscipit tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec tincidunt. Lorem mollis aliquam ut porttitor leo.</p>
+</section>
+
+<section data-pswp>
+  <div class="gallery">
+    <div class="gallery-item">
+      <a href="images/img01.jpg">
+        <img src="images/img01-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img02.jpg">
+        <img src="images/img02-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img03.jpg">
+        <img src="images/img03-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img04.jpg">
+        <img src="images/img04-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img05.jpg">
+        <img src="images/img05-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img06.jpg">
+        <img src="images/img06-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img07.jpg">
+        <img src="images/img07-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img08.jpg">
+        <img src="images/img08-thumb.jpg">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="images/img02.jpg">
+        <img src="images/img02-thumb.jpg">
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+ <!-- Lazy Load -->
+   <script src="js/lazyload.min.js" charset="utf-8"></script>
+ <!-- PhotoSwipe & Photoswipe Simplify -->
+   <script src="js/photoswipe.min.js" charset="utf-8"></script>
+   <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
+   <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
+   <script charset="utf-8">
+     photoswipeSimplify.init({
+                   history: false,
+                   bgOpacity: .7,
+                   zoomEl: false,
+                   shareEl: false,
+                   fullscreenEl: false,
+                   closeEl: false,
+                       captionEl: false,
+                       barsSize: {top:44, bottom:44}
                 });
- 
-                var lazyiFrame = new LazyLoad({
-                    elements_selector: "iframe"
-                });
-    </script>
-  </body>
+                
+           var lazyLoadInstance = new LazyLoad({
+               elements_selector: "img"
+               });
+
+               var lazyiFrame = new LazyLoad({
+                   elements_selector: "iframe"
+               });
+   </script>
+ </body>
 </html>
