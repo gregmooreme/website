@@ -122,15 +122,16 @@
                var lazyiFrame = new LazyLoad({
                    elements_selector: "iframe"
                });
-
-  if ('registerElement' in document
-    && 'createShadowRoot' in HTMLElement.prototype
-    && 'import' in document.createElement('link')
-    && 'content' in document.createElement('template')) {
-    // We're using a browser with native WC support!
-  } else {
-    document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.5/webcomponents.min.js"><\/script>')
-  }
+   </script>
+  <script charset="utf-8">
+      if ('registerElement' in document
+        && 'createShadowRoot' in HTMLElement.prototype
+        && 'import' in document.createElement('link')
+        && 'content' in document.createElement('template')) {
+        // We're using a browser with native WC support!
+      } else {
+        document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.5/webcomponents.min.js"><\/script>')
+      }
    </script>
  </body>
 </html>
