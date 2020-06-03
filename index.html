@@ -11,22 +11,27 @@
   <!-- Photoswipe Styles -->
   <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
   <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
-  <!-- HTML Includes Polyfill - Load before any other JS -->
-  <script charset="utf-8">
-    if ('registerElement' in document
-      && 'createShadowRoot' in HTMLElement.prototype
-      && 'import' in document.createElement('link')
-      && 'content' in document.createElement('template')) {
-      // We're using a browser with native WC support!
-    } else {
-      document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.5/webcomponents.min.js"><\/script>')
-    }
- </script>
 </head>
 
 <body>
 
-<html-include src="nav.html"></html-include>
+  <!-- Navigation -->
+  <input type="checkbox" id="myInput">
+  <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </label>
+  <aside>
+    <div class="aside-section aside-right">
+      <ul class="aside-list">
+        <li><a href="" class="aside-anchor">Home</a></li>
+        <li><a href="" class="aside-anchor">About</a></li>
+        <li><a href="" class="aside-anchor">Another Link</a></li>
+        <li><a href="" class="aside-anchor">Here Comes A Link</a></li>
+      </ul>
+    </div>
+  </aside>
 
 <main>
 <header>
@@ -106,8 +111,6 @@
 </section>
 </main>
 
- <!-- HTML Include -->
-   <script src="js/html-include.min.js" charset="utf-8"></script>
  <!-- Lazy Load -->
    <script src="js/lazyload.min.js" charset="utf-8"></script>
  <!-- PhotoSwipe & Photoswipe Simplify -->
