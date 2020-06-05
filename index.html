@@ -15,34 +15,33 @@
 
 <body>
 
-  <!-- Navigation -->
-  <input type="checkbox" id="myInput">
-  <label for="myInput">
-      <span class="bar top"></span>
-      <span class="bar middle"></span>
-      <span class="bar bottom"></span>
-    </label>
-  <aside>
-    <div class="aside-section aside-right">
-      <ul class="aside-list">
-        <li><a href="" class="aside-anchor">Home</a></li>
-        <li><a href="" class="aside-anchor">About</a></li>
-        <li><a href="" class="aside-anchor">Another Link</a></li>
-        <li><a href="" class="aside-anchor">Here Comes A Link</a></li>
-      </ul>
+<!---------------------------------->
+<div class="nav-wrapper">
+  <nav class="navbar">
+    <img src="images/rocket.png" alt="Logo">
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-  </aside>
+    <ul class="nav">
+      <li class="nav-item"><a href="#">Home</a></li>
+      <li class="nav-item"><a href="#">About</a></li>
+      <li class="nav-item"><a href="#">Photos</a></li>
+      <li class="nav-item"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+<header class="headline">
+  <h1>Headline</h1>
+  <p>With a descriptive sub-head.</p>
+</header>
+<!---------------------------------->
 
 <main>
-<header class="header header--big-bg">
-	<div class="header__content">
-    <h2>Big Picture</h2>
-  </div>
-</header>
-
 <section>
     <h1>Cats</h1>
-    <p>This is a test page for combining a simple CSS Grid layout with PhotoSwipe. The goal isn't to win design awards but to make for a simple, pleasurable browsing exprience. More features and design will be added as I play.</p>
+    <p>This is a test page for combining a simple <a href="#">CSS Grid layout</a> with PhotoSwipe. The goal isn't to win design awards but to make for a simple, pleasurable browsing exprience. More features and design will be added as I play.</p>
 </section>
 
 <section data-pswp>
@@ -58,7 +57,7 @@
     </ul>
 </section>
 
-<section>
+<section class="text-block">
     <p>Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. Accumsan tortor posuere ac ut consequat. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Proin libero nunc consequat interdum varius sit amet mattis. In iaculis nunc sed augue lacus. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Neque aliquam vestibulum morbi blandit cursus risus at. Suscipit tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec tincidunt. Lorem mollis aliquam ut porttitor leo.</p>
 </section>
 
@@ -104,15 +103,18 @@
         <img src="images/img08-thumb.jpg">
       </a>
     </div>
-    <div class="gallery-item">
-      <a href="images/img02.jpg">
-        <img src="images/img02-thumb.jpg">
-      </a>
-    </div>
   </div>
 </section>
 </main>
 
+ <!-- Navbar -->
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+   <script id="rendered-js">
+      $('.menu-toggle').click(function(){
+          $(".nav").toggleClass("mobile-nav");
+          $(this).toggleClass("is-active");
+      });
+   </script>
  <!-- Lazy Load -->
    <script src="js/lazyload.min.js" charset="utf-8"></script>
  <!-- PhotoSwipe & Photoswipe Simplify -->
