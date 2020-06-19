@@ -11,35 +11,36 @@
     <!-- Photoswipe Styles -->
     <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
     <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
-
-    <style>
-        .test {
-            text-align: center;
-            padding: 1rem;
-            border: 0.0625rem solid #c0c9e4;
-            background: #fafbfe;
+    <!-- Server Side Includes script -->
+    <script>
+      function w3IncludeHTML() {
+        var z, i, a, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          if (z[i].getAttribute("w3-include-html")) {
+            a = z[i].cloneNode(false);
+            file = z[i].getAttribute("w3-include-html");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (xhttp.readyState == 4 && xhttp.status == 200) {
+                a.removeAttribute("w3-include-html");
+                a.innerHTML = xhttp.responseText;
+      
+                z[i].parentNode.replaceChild(a, z[i]);
+                w3IncludeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+          }
         }
-    </style>
+      }
+      </script>
 </head>
 <body>
 <!-- NAVBAR -------------------------------->
-<div class="nav-wrapper">
-    <nav class="navbar">
-      <!-- <img src="images/rocket.svg" alt="Logo"> -->
-      <span><a href="#"">Greg Moore</a></span>
-      <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="nav">
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="about.html">About</a></li>
-        <li class="nav-item"><a href="paris.html">Photos</a></li>
-        <li class="nav-item"><a href="https://gregmoore.micro.blog" target="_blank" ref="nofollow">Micro.blog</a></li>
-      </ul>
-    </nav>
-</div>
+<div w3-include-html="navbar.html"></div>
 
 <!-- HEADER -------------------------------->
 <header class="fw-header" style="background:url('img/paris/xl/paris-watercolor.jpg'); background-size:cover;">
@@ -275,6 +276,8 @@
   <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
   <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
   <script charset="utf-8">
+    w3IncludeHTML();
+
     photoswipeSimplify.init({
                   history: false,
                   bgOpacity: .7,
