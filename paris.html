@@ -40,7 +40,19 @@
 </head>
 <body>
 <!-- NAVBAR -------------------------------->
-<div w3-include-html="navbar.html"></div>
+<div class="nav-wrapper">
+  <nav class="navbar">
+    <span><a href="#"">Greg Moore</a></span>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav">
+      <div w3-include-html="navbar.html"></div>
+    </ul>
+  </nav>
+</div>
 
 <!-- HEADER -------------------------------->
 <header class="fw-header" style="background:url('img/paris/xl/paris-watercolor.jpg'); background-size:cover;">
