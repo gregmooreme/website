@@ -1,0 +1,76 @@
+/* Variables */
+$background: #efefef;
+$font-color: #333333;
+$link-hover: #3498db;
+
+* { box-sizing: border-box; margin: 0; padding: 0; border: 0; scroll-behavior: smooth; }
+
+/* Overrides */
+.pswp__top-bar { background-color: transparent !important; }
+
+/* Base Styles */
+
+html {
+    height: 100%;
+    // Minimum 16x, and grows more slowly (half the rate of screen growth)
+    font-size: calc(1em + 0.5vw);
+    
+    // Line-height based on font-size, with addition viewport-relative growth
+    line-height: calc(1.1em + 0.5vw);
+    margin: 0;
+}
+body {
+    height: 100%;
+    background-color: $background;
+    font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 1rem;
+
+    @media screen and (max-width: 45em) {
+        margin: 0.5em 0;
+    }
+}
+
+h1 {
+    // Grows more quickly, allowing for wider variation on larger screens
+    font-size: calc(2rem + 1.5vw);
+}
+
+h2 {
+    // Based on the root text-size, and therefore growing at the same rate
+    font-size: calc(1rem + 1.5vw);
+}
+
+a {
+    // Smooth out those color fades
+    transition: color 0.3s ease-out;
+}
+
+section {
+    padding: 2rem 0;
+
+    p {
+        font-size: 1rem;
+        margin: 0.5rem 1rem;
+
+        @media screen and (max-width: 45em) {
+            margin: 0.5em 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 2px 5px;
+            transition: 0.3s ease-out;
+
+            &:hover {
+                background-color: #ccc;
+                text-decoration: underline;
+            }
+        }
+    }
+}
