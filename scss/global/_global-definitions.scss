@@ -48,6 +48,12 @@ a {
     transition: color 0.3s ease-out;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 section {
     padding: 2rem 0;
 
