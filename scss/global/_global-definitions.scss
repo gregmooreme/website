@@ -1,7 +1,8 @@
 /* Variables */
 $background: #efefef;
 $font-color: #333333;
-$link-hover: #3498db;
+$link: #bcd8ee;
+$link-hover: #0085ef;
 
 * { box-sizing: border-box; margin: 0; padding: 0; border: 0; scroll-behavior: smooth; }
 
@@ -26,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0.5rem 1rem;
+    margin: 0.75rem 1rem;
 
     @media screen and (max-width: 45em) {
         margin: 0.5em 0;
@@ -54,8 +55,14 @@ img {
     object-fit: cover;
 }
 
+hr {             
+    background-color:#666;
+    height: 1px;
+    margin: 10px 20px;
+}
+
 section {
-    padding: 2rem 0;
+    padding: 2rem 0.5rem;
 
     p {
         font-size: 1rem;
@@ -68,15 +75,17 @@ section {
         a {
             text-decoration: none;
             color: $font-color;
-            background-color: #ddd;
+            background-color: $link;
             border-radius: 5px;
             padding: 2px 5px;
             transition: 0.3s ease-out;
 
             &:hover {
-                background-color: #ccc;
-                text-decoration: underline;
+                background-color: $link-hover;
+                color: white;
+                //text-decoration: underline;
             }
         }
     }
+
 }
