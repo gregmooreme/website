@@ -66,6 +66,11 @@ figcaption {
     line-height: 1rem;
 }
 
+.spacer {
+    clear: both;
+    height: 1rem;
+}
+
 section {
     padding: 2rem 0.5rem;
 
@@ -92,5 +97,8 @@ section {
             }
         }
     }
+
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
 
 }
