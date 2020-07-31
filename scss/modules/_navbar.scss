@@ -46,8 +46,7 @@
 			color: $font-color;
 
 			&:hover {
-				color: white;
-				box-shadow: inset 0 -45px 0 #0085ef;
+				color: $link-hover;
 			}
 
 			@media (prefers-color-scheme: dark) {
@@ -72,7 +71,9 @@
         text-decoration: none;
         
             &:hover {
-                color: $link-hover;
+				//color: $link-hover;
+				color: white;
+				box-shadow: inset 0 -45px 0 #0085ef;
 			}
 		
 			@media (prefers-color-scheme: dark) {
