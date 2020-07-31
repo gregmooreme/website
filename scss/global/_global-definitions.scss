@@ -1,5 +1,6 @@
 /* Variables */
-$background: #efefef;
+$light-bg: #efefef;
+$dark-bg: #1c1e20;
 $font-color: #333333;
 $link: #bcd8ee;
 $link-hover: #0085ef;
@@ -22,8 +23,16 @@ html {
 }
 body {
     height: 100%;
-    background-color: $background;
     font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark-bg;
+        color: white;
+    }
+    @media (prefers-color-scheme: light) {
+        background-color: $light-bg;
+        color: black;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {

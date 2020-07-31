@@ -5,8 +5,16 @@
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
-	background-color: #fff;
 	box-shadow: 0 0 3px 1px #666;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: #393a3b;
+		color: white;
+	}
+	@media (prefers-color-scheme: light) {
+		background-color: $light-bg;
+		color: black;
+	}
 }
 
 /* NAVIGATION */
@@ -38,6 +46,10 @@
 
 			&:hover {
 				color: $link-hover;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				color: white;
 			}
 		}
 	}
@@ -120,14 +132,22 @@
 		position: fixed;
 		justify-content: start;
 		top: 70px;
-		background-color: #fff;
 		width: 100%;
 		height: calc(100vh - 50px);
         transform: translate(101%); /* positive = slide from right, negative = slide from left */
         transition: all 0.3s ease-in-out; /* slow animation down */
 		text-align: center;
         overflow: hidden;
-        margin: 0;
+		margin: 0;
+		
+		@media (prefers-color-scheme: dark) {
+			background-color: #393a3b;
+			color: white;
+		}
+		@media (prefers-color-scheme: light) {
+			background-color: $light-bg;
+			color: black;
+		}
 	}
 
 	.navbar li {
