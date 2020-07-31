@@ -30,7 +30,7 @@
 		font-size: 2rem;
 		//font-weight: 700;
 		justify-self: start;
-		margin-left: 20px;
+		margin-left: 3rem;
 		
 		a {
 			text-decoration: none;
@@ -46,7 +46,8 @@
         list-style: none;
         display: grid;
         grid-template-columns: repeat(4,1fr); /* 1st number = number of links */
-        grid-column-gap: 0.5rem;
+		grid-column-gap: 0.5rem;
+		margin-right: 3rem;
         justify-self: end;
     }
 
