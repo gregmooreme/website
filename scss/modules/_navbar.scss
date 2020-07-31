@@ -71,7 +71,11 @@
         
             &:hover {
                 color: $link-hover;
-            }
+			}
+		
+			@media (prefers-color-scheme: dark) {
+				color: white;
+			}
     }
 }
 
