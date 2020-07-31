@@ -25,6 +25,7 @@ body {
     height: 100%;
     font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 
+    // Dark Mode!
     @media (prefers-color-scheme: dark) {
         background-color: $dark-bg;
         color: white;
@@ -56,12 +57,19 @@ h2 {
 a {
     // Smooth out those color fades
     transition: color 0.3s ease-out;
+    color: #0085ef;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 3px;
 }
 
 hr {             

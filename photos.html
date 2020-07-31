@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home | Greg Moore.me</title>
+	<meta name="author" content="Greg Moore">
+	<meta name="description" content="Photographs by Greg Moore">
+    <meta name="keywords" content="personal,css,grid,photography,photos,travel">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="styles/global.css">
+    <!-- Photoswipe Styles -->
+    <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
+    <!-- Server Side Includes script -->
+    <script>
+      function w3IncludeHTML() {
+        var z, i, a, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          if (z[i].getAttribute("w3-include-html")) {
+            a = z[i].cloneNode(false);
+            file = z[i].getAttribute("w3-include-html");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (xhttp.readyState == 4 && xhttp.status == 200) {
+                a.removeAttribute("w3-include-html");
+                a.innerHTML = xhttp.responseText;
+      
+                z[i].parentNode.replaceChild(a, z[i]);
+                w3IncludeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+          }
+        }
+      }
+      </script>
+</head>
+<body>
+<!-- NAVBAR -------------------------------->
+<div class="nav-wrapper">
+  <nav class="navbar">
+    <span>Greg Moore</span>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div w3-include-html="navbar.html"></div>
+  </nav>
+</div>
+
+
+<!-- HEADER --------------------------------
+<header class="fw-header" style="background:url('img/paris/xl/paris-watercolor.jpg'); background-size:cover;">
+    <h1>H1 Headline</h1>
+    <p>Description</p>
+</header>-->
+
+    <main>
+        <div class="spacer"></div>
+
+        <section class="container grid">
+          <div class="column-xs-12">
+            <h2>Photos</h2>
+              <p style="font-weight: 200;">I enjoy using photography to document my life and remember the emotions of the places and people I encounter. Here are some of my favorites.</p>
+              <hr>
+          </div>
+        </section>
+
+        <section class="container grid">
+          <div class="column-xs-12 column-sm-4">
+            <a href="website/paris.html">
+            <p><img src="img/paris/sm/paris-thumb.jpg" alt="Paris, France" /></p>
+            <h4>Paris, France</h4>
+            </a>
+          </div>
+          <div class="column-xs-12 column-sm-4">
+            <p><img src="https://via.placeholder.com/628x628.png?text=Coming+Soon" alt="London, England" /></p>
+            <h4 style="color: #999;">London, England</h4>
+          </div>
+          <div class="column-xs-12 column-sm-4">
+            <a href="website/tampa.html">
+            <p><img src="img/tampa/sm/tampa-thumb.jpg" alt="Tampa,Florida" /></p>
+            <h4>Tampa, Florida</h4>
+            </a>
+          </div>
+          <div class="column-xs-12 column-sm-4">
+            <a href="website/usf.html">
+            <p><img src="img/usf/sm/usf-thumb.jpg" alt="University of South Florida" /></p>
+            <h4>University of South Florida</h4>
+            </a>
+          </div>
+          <div class="column-xs-12 column-sm-4">
+            <a href="website/ut.html">
+            <p><img src="img/ut/sm/ut-thumb.jpg" alt="University of Tampa" /></p>
+            <h4>University of Tampa</h4>
+            </a>
+          </div>
+        </section>
+
+    </main>
+
+<!-- FOOTER -------------------------------->
+<div w3-include-html="footer.html"></div>
+
+<!-- Navbar -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script id="rendered-js">
+     $('.menu-toggle').click(function(){
+         $(".nav").toggleClass("mobile-nav");
+         $(this).toggleClass("is-active");
+     });
+  </script>
+<!-- PhotoSwipe & Photoswipe Simplify -->
+  <script src="js/photoswipe.min.js" charset="utf-8"></script>
+  <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
+  <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
+  <script charset="utf-8">
+    w3IncludeHTML();
+
+    photoswipeSimplify.init({
+                  history: false,
+                  bgOpacity: .7,
+                  zoomEl: false,
+                  shareEl: false,
+                  fullscreenEl: false,
+                  closeEl: false,
+                      captionEl: false,
+                      barsSize: {top:44, bottom:44}
+               });
+               
+          var lazyLoadInstance = new LazyLoad({
+              elements_selector: "img"
+              });
+
+              var lazyiFrame = new LazyLoad({
+                  elements_selector: "iframe"
+              });
+  </script>
+</body>
+</html>
