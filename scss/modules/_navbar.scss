@@ -110,7 +110,10 @@
 @media only screen and (max-width: 48rem) {
   
   /* MOBILE NAVIGATION */
-     
+     span {
+		 margin-left: 1rem;
+	 }
+	 
 	.navbar ul {
 		display: flex;
 		flex-direction: column;
