@@ -6,6 +6,7 @@
 	position: sticky;
 	top: 0;
 
+	// Dark Mode!
 	@media (prefers-color-scheme: dark) {
 		border-bottom: 8px solid #0085ef;
 		background-color: #393a3b;
@@ -49,6 +50,7 @@
 				color: $link-hover;
 			}
 
+			// Dark Mode!
 			@media (prefers-color-scheme: dark) {
 				color: white;
 			}
@@ -80,6 +82,7 @@
 				border-radius: 5px;
 			}
 		
+			// Dark Mode!
 			@media (prefers-color-scheme: dark) {
 				color: white;
 			}
@@ -155,6 +158,7 @@
         overflow: hidden;
 		margin: 0;
 		
+		// Dark Mode!
 		@media (prefers-color-scheme: dark) {
 			background-color: #393a3b;
 			color: white;
@@ -173,7 +177,7 @@
 	    }
 
         a {
-            font-size: 1rem;
+            font-size: 2rem;
         }
     }
 
