@@ -68,12 +68,13 @@
         color: $font-color;
         font-size: 0.9rem;
         font-weight: 400;
-        text-decoration: none;
+		text-decoration: none;
         
             &:hover {
 				//color: $link-hover;
 				color: white;
 				box-shadow: inset 0 -45px 0 #0085ef;
+				transition: 0.3s ease-out;
 			}
 		
 			@media (prefers-color-scheme: dark) {
