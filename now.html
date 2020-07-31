@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home | Greg Moore.me</title>
+	<meta name="author" content="Greg Moore">
+	<meta name="description" content="Now page for Greg Moore">
+    <meta name="keywords" content="now,personal,interests">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="styles/global.css">
+    <!-- Photoswipe Styles -->
+    <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
+    <!-- Server Side Includes script -->
+    <script>
+      function w3IncludeHTML() {
+        var z, i, a, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          if (z[i].getAttribute("w3-include-html")) {
+            a = z[i].cloneNode(false);
+            file = z[i].getAttribute("w3-include-html");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (xhttp.readyState == 4 && xhttp.status == 200) {
+                a.removeAttribute("w3-include-html");
+                a.innerHTML = xhttp.responseText;
+      
+                z[i].parentNode.replaceChild(a, z[i]);
+                w3IncludeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+          }
+        }
+      }
+      </script>
+</head>
+<body>
+<!-- NAVBAR -------------------------------->
+<div class="nav-wrapper">
+  <nav class="navbar">
+    <span><a href="#">Greg Moore</a></span>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div w3-include-html="navbar.html"></div>
+  </nav>
+</div>
+
+
+<!-- HEADER --------------------------------
+<header class="fw-header" style="background:url('img/paris/xl/paris-watercolor.jpg'); background-size:cover;">
+    <h1>H1 Headline</h1>
+    <p>Description</p>
+</header>-->
+
+    <main>
+
+        <section class="container grid align-center">
+          <div class="column-xs-2 column-sm-2">
+              <p><img src="img/now/greg-memoji-2020.png" alt="Greg Moore" /></p>
+              <figcaption>☝️This is what my phone currently thinks I look like.</figcaption>
+          </div>
+          <div class="column-xs-10 column-sm-10">
+              <h1>Now</h1>
+              <h3 style="font-weight: 200; font-variant: small-caps;">These are the things that I'm into right now.</h3>
+              <hr>
+              <p><a href="/now">Things I'm into right now</a></p>
+              <hr>
+              <p>I’m now old enough to have gathered a wide variety of job titles; graphic designer, barista, janitor…<br />
+              Currently, I enjoy being a frontend web developer for the University of South Florida.</p>
+          </div>
+        </section>
+
+    </main>
+
+<!-- Navbar -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script id="rendered-js">
+     $('.menu-toggle').click(function(){
+         $(".nav").toggleClass("mobile-nav");
+         $(this).toggleClass("is-active");
+     });
+  </script>
+<!-- PhotoSwipe & Photoswipe Simplify -->
+  <script src="js/photoswipe.min.js" charset="utf-8"></script>
+  <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
+  <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
+  <script charset="utf-8">
+    w3IncludeHTML();
+
+    photoswipeSimplify.init({
+                  history: false,
+                  bgOpacity: .7,
+                  zoomEl: false,
+                  shareEl: false,
+                  fullscreenEl: false,
+                  closeEl: false,
+                      captionEl: false,
+                      barsSize: {top:44, bottom:44}
+               });
+               
+          var lazyLoadInstance = new LazyLoad({
+              elements_selector: "img"
+              });
+
+              var lazyiFrame = new LazyLoad({
+                  elements_selector: "iframe"
+              });
+  </script>
+</body>
+</html>
