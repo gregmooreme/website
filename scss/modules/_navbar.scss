@@ -5,13 +5,14 @@
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
-	box-shadow: 0 0 3px 1px #666;
 
 	@media (prefers-color-scheme: dark) {
+		border-bottom: 8px solid #0085ef;
 		background-color: #393a3b;
 		color: white;
 	}
 	@media (prefers-color-scheme: light) {
+		box-shadow: 0 0 3px 1px #666;
 		background-color: $light-bg;
 		color: black;
 	}
