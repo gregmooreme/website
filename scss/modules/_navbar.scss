@@ -13,7 +13,8 @@
 		color: white;
 	}
 	@media (prefers-color-scheme: light) {
-		box-shadow: 0 0 3px 1px #666;
+		//box-shadow: 0 0 3px 1px #666;
+		border-bottom: 8px solid #0085ef;
 		background-color: $light-bg;
 		color: black;
 	}
