@@ -1,4 +1,4 @@
 # website
-Just a GitHub personal website for UX/UI experiments.
+Just a GitHub personal website.
 
-https://gregmooreme.github.io/website/
+https://gregmoore.me
