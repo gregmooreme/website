@@ -1,0 +1,31 @@
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.75rem 1rem;
+
+    @media screen and (max-width: 45em) {
+        margin: 0.5em 0;
+    }
+}
+
+h1 {
+    // Grows more quickly, allowing for wider variation on larger screens
+    font-size: calc(2rem + 1.5vw);
+}
+
+h2 {
+    // Based on the root text-size, and therefore growing at the same rate
+    font-size: calc(1rem + 1.5vw);
+}
+
+figcaption {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }

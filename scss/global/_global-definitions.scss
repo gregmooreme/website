@@ -1,4 +1,5 @@
-/* Variables */
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 $light-bg: #efefef;
 $dark-bg: #1c1e20;
 $font-color: #333333;
@@ -7,11 +8,12 @@ $link-hover: #0085ef;
 
 * { box-sizing: border-box; margin: 0; padding: 0; border: 0; scroll-behavior: smooth; }
 
-/* Overrides */
+/* Overrides
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .pswp__top-bar { background-color: transparent !important; }
 
-/* Base Styles */
-
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
     height: 100%;
     // Minimum 16x, and grows more slowly (half the rate of screen growth)
@@ -23,7 +25,6 @@ html {
 }
 body {
     height: 100%;
-    font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 
     // Dark Mode!
     @media (prefers-color-scheme: dark) {
@@ -34,24 +35,6 @@ body {
         background-color: $light-bg;
         color: black;
     }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0.75rem 1rem;
-
-    @media screen and (max-width: 45em) {
-        margin: 0.5em 0;
-    }
-}
-
-h1 {
-    // Grows more quickly, allowing for wider variation on larger screens
-    font-size: calc(2rem + 1.5vw);
-}
-
-h2 {
-    // Based on the root text-size, and therefore growing at the same rate
-    font-size: calc(1rem + 1.5vw);
 }
 
 a {
@@ -76,11 +59,6 @@ hr {
     background-color:#666;
     height: 1px;
     margin: 10px 20px;
-}
-
-figcaption {
-    font-size: 0.75rem;
-    line-height: 1rem;
 }
 
 .spacer {
@@ -114,8 +92,4 @@ section {
             }
         }
     }
-
-    .text-center { text-align: center; }
-    .text-right { text-align: right; }
-
 }

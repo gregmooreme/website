@@ -3,7 +3,7 @@
 // Google web fonts
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
-// Third-party plugins (don't modify these)
+// Third-party plugins (DO NOT MODIFY)
 @import "global/_sanitize";
 
 // Global
@@ -12,11 +12,9 @@
 
 // Elements
 @import "elements/_buttons";
+@import "elements/_typography";
 
 // Modules
-//@import "modules/_gallery-simple-grid";
-//@import "modules/_gallery-mason";
-//@import "modules/_gallery-masonry";
 @import "modules/_gallery-grid";
 @import "modules/_navbar";
 @import "modules/_fw-header";
