@@ -1,5 +1,13 @@
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+    // Minimum 16x, and grows more slowly (half the rate of screen growth)
+    font-size: calc(1em + 0.5vw);
+
+    // Line-height based on font-size, with addition viewport-relative growth
+    line-height: calc(1.1em + 0.5vw);
+}
+
 body {
     font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
@@ -29,3 +37,32 @@ figcaption {
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
+
+section {
+    padding: 2rem 0.5rem;
+
+    p {
+        font-size: 1rem;
+        margin: 0.5rem 1rem;
+        line-height: calc(1ex / 0.32);
+
+        @media screen and (max-width: 45em) {
+            margin: 0.5em 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+            background-color: $link;
+            border-radius: 5px;
+            padding: 2px 5px;
+            transition: 0.3s ease-out;
+
+            &:hover {
+                background-color: $link-hover;
+                color: white;
+                //text-decoration: underline;
+            }
+        }
+    }
+}
