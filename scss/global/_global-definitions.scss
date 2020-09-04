@@ -44,13 +44,6 @@ a {
     }
 }
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 hr {             
     background-color:#666;
     height: 1px;
@@ -60,4 +53,17 @@ hr {
 .spacer {
     clear: both;
     height: 1rem;
+}
+
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.rounded {
+    border-radius: 0.5rem;
 }

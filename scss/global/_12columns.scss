@@ -47,6 +47,12 @@ $lg: 60rem;
   align-items: end;
 }
 
+.mobile-center {
+  @media (max-width: $sm) {
+    text-align: center;
+  }
+}
+
 @for $i from 1 through $grid-columns {
   .column-xs-#{$i} {
     flex-basis: $i / $grid-columns * 100%;
