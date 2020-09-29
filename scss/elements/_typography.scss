@@ -66,3 +66,10 @@ section {
         }
     }
 }
+
+.wave {
+    animation: svelte-17elbul-wave 12s linear;
+    animation-delay: 1.8s;
+    transform-origin: 70% 70%;
+    animation-iteration-count: infinite;
+}
