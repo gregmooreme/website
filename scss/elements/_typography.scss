@@ -73,6 +73,7 @@ section {
     animation-delay: 1.8s;
     transform-origin:  70% 70%;
     animation-iteration-count: infinite;
+    display: inline-block;
 
     @keyframes hello {
         0% { transform:rotate(0deg) }
