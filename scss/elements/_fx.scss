@@ -1,0 +1,33 @@
+/* Special Effects
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// The emoji hand can wave now
+.wave {
+    animation: hello 12s linear;
+    animation-delay: 1.8s;
+    transform-origin:  70% 70%;
+    animation-iteration-count: infinite;
+    display: inline-block;
+
+    @keyframes hello {
+        0% { transform:rotate(0deg) }
+        1% { transform:rotate(14deg) }
+        2% { transform:rotate(-8deg) }
+        3% { transform:rotate(14deg) }
+        4% { transform:rotate(-4deg) }
+        5% { transform:rotate(10deg) }
+        6% { transform:rotate(0deg) }
+        10% { transform: rotate(0deg) }
+    }
+}
+
+// Callout a content block by tilting it to the left like a card
+.tilt-card {
+	position: relative;
+	background: white;
+	border-radius: 10px;
+    margin: 50px 70px 50px;
+    padding: 10px;
+	box-shadow: 0 10px 15px #cccccc;
+	transform: rotate(-1.5deg) scale(1.15);
+	overflow: hidden;
+}
