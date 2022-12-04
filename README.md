@@ -1,4 +1,4 @@
 # website
-Just a GitHub personal website.
+Just a GitHub personal website I built to learn some things.
 
-https://gregmoore.me
+[Demo Site](https://gregmooreme.github.io/website/)
