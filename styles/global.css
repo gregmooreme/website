@@ -1219,8 +1219,7 @@ section p {
 
 section p a {
   text-decoration: none;
-  color: #333333;
-  background-color: #bcd8ee;
+  color: #0085ef;
   border-radius: 5px;
   padding: 2px 5px;
   transition: 0.3s ease-out;
@@ -1349,11 +1348,11 @@ section p a:hover {
 
 .navbar span a {
   text-decoration: none;
-  color: #333333;
+  color: #0085ef;
 }
 
 .navbar span a:hover {
-  color: #0085ef;
+  color: #333333;
 }
 
 @media (prefers-color-scheme: dark) {

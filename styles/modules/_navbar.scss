@@ -46,10 +46,10 @@
 		
 		a {
 			text-decoration: none;
-			color: $font-color;
+			color: $link-hover;
 
 			&:hover {
-				color: $link-hover;
+				color: $font-color;
 			}
 
 			// Dark Mode!
