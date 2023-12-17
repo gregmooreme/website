@@ -1,5 +1,8 @@
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@import url(https://fonts.bunny.net/css?family=fraunces:300,400,600,800|rock-salt:400);
+
 html {
     // Minimum 16x, and grows more slowly (half the rate of screen growth)
     font-size: calc(1em + 0.5vw);
@@ -9,7 +12,8 @@ html {
 }
 
 body {
-    font-family: system-ui, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
