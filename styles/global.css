@@ -1267,6 +1267,8 @@ section p a:hover {
   }
 }
 
+/* Cards - Callout content block that is straight or tilted to the left like a card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .tilt-card {
   position: relative;
   background: white;
@@ -1286,6 +1288,30 @@ section p a:hover {
   padding: 10px;
   box-shadow: 0 10px 15px #cccccc;
   overflow: hidden;
+}
+
+/* Micro.blog Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.microblog_text p {
+  margin: 0.5em 0 !important;
+}
+
+.microblog_time {
+  display: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  background: linear-gradient(0deg, #ff8800 35%, #fdbb2d 100%);
+}
+
+.icon-mb {
+  mask: url(/img/home/micro-dot-blog.svg);
+  -webkit-mask: url(/img/home/micro-dot-blog.svg);
 }
 
 /* Gallery Grid - https://codepen.io/andybarefoot/pen/QMeZda */
