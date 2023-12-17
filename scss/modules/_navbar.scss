@@ -5,6 +5,7 @@
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
+	z-index: 2;
 
 	// Dark Mode!
 	@media (prefers-color-scheme: dark) {
@@ -26,12 +27,8 @@
 	display: grid;
 	grid-template-columns: 1fr auto;
 	align-content: center;
-	height: 115px;
+	height: 75px;
 	overflow: hidden;
-
-	@media (max-width: 45em) {
-		height: 75px;
-	}
 
     img {
         height: 30px;
