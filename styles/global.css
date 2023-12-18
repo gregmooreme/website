@@ -1280,6 +1280,13 @@ section p a:hover {
   overflow: hidden;
 }
 
+@media (prefers-color-scheme: dark) {
+  .tilt-card {
+    background-color: #666;
+    color: white;
+  }
+}
+
 .card {
   position: relative;
   background: white;
@@ -1288,6 +1295,14 @@ section p a:hover {
   padding: 10px;
   box-shadow: 0 10px 15px #cccccc;
   overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #2E3440;
+    color: white;
+    box-shadow: 0 10px 15px #000;
+  }
 }
 
 /* Micro.blog Card
@@ -1335,7 +1350,7 @@ section p a:hover {
 @media (prefers-color-scheme: dark) {
   .nav-wrapper {
     border-bottom: 6px solid #0085ef;
-    background-color: #393a3b;
+    background-color: #2E3440;
     color: white;
   }
 }
@@ -1399,7 +1414,7 @@ section p a:hover {
 
 .navbar .nav-item a {
   color: #333333;
-  font-size: 0.9rem;
+  font-size: 1em;
   font-weight: 400;
   text-decoration: none;
   transition: 0.3s ease-out;

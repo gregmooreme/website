@@ -10,7 +10,7 @@
 	// Dark Mode!
 	@media (prefers-color-scheme: dark) {
 		border-bottom: 6px solid #0085ef;
-		background-color: #393a3b;
+		background-color: #2E3440;
 		color: white;
 	}
 	@media (prefers-color-scheme: light) {
@@ -70,7 +70,7 @@
 
     .nav-item a {
         color: $font-color;
-        font-size: 0.9rem;
+        font-size: 1em;
         font-weight: 400;
 		text-decoration: none;
 		transition: 0.3s ease-out;
