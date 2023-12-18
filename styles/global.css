@@ -1414,7 +1414,7 @@ section p a:hover {
 
 .navbar .nav-item a {
   color: #333333;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
   transition: 0.3s ease-out;
@@ -1525,7 +1525,7 @@ section p a:hover {
     margin-top: 50px;
   }
   .navbar li a {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .menu-toggle, .bar {
     display: block;
