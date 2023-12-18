@@ -125,10 +125,10 @@
 			-o-transform: translateY(8px) rotate(45deg);
 			transform: translateY(8px) rotate(45deg);
 		}
-		&:nth-child(2) {
+		&:nth-child(3) {
 			opacity: 0;
 		}
-		&:nth-child(3) {
+		&:nth-child(2) {
 			-webkit-transform: translateY(-8px) rotate(-45deg);
 			-ms-transform: translateY(-8px) rotate(-45deg);
 			-o-transform: translateY(-8px) rotate(-45deg);
