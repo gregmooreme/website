@@ -1448,7 +1448,7 @@ section p a:hover {
 .menu-toggle .bar {
   width: 25px;
   height: 3px;
-  background-color: #3f3f3f;
+  background-color: #2E3440;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1505,7 +1505,7 @@ section p a:hover {
 
 @media only screen and (max-width: 48rem) and (prefers-color-scheme: dark) {
   .navbar ul {
-    background-color: #393a3b;
+    background-color: #2E3440;
     color: white;
   }
 }
