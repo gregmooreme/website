@@ -1519,13 +1519,13 @@ section p a:hover {
 }
 
 @media only screen and (max-width: 48rem) {
-  .nav-item li {
+  .navbar li {
     padding: 15px;
   }
-  .nav-item li:first-child {
+  .navbar li:first-child {
     margin-top: 50px;
   }
-  .nav-item li a {
+  .navbar li a {
     font-size: 1.5rem;
   }
   .menu-toggle, .bar {
