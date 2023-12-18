@@ -1310,8 +1310,8 @@ section p a:hover {
 }
 
 .icon-mb {
-  mask: url(/img/home/micro-dot-blog.svg);
-  -webkit-mask: url(/img/home/micro-dot-blog.svg);
+  mask: url(img/home/microblog.svg);
+  -webkit-mask: url(img/home/microblog.svg);
 }
 
 /* Gallery Grid - https://codepen.io/andybarefoot/pen/QMeZda */
