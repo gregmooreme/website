@@ -1372,7 +1372,7 @@ section p a:hover {
   margin-left: 20px;
 }
 
-.navbar .logo {
+.navbar span {
   font-family: "Rock Salt", handwriting;
   font-size: 1em;
   font-weight: 400;
@@ -1380,17 +1380,17 @@ section p a:hover {
   margin-left: 3rem;
 }
 
-.navbar .logo a {
+.navbar span a {
   text-decoration: none;
   color: #0085ef;
 }
 
-.navbar .logo a:hover {
+.navbar span a:hover {
   color: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
-  .navbar .logo a {
+  .navbar span a {
     color: white;
   }
 }
@@ -1454,6 +1454,28 @@ section p a:hover {
   }
 }
 
+/*
+#mobile-menu.is-active {
+	.bar {
+		&:nth-child(2) {
+			opacity: 0;
+		}
+
+		&:nth-child(1) {
+			-webkit-transform: translateY(8px) rotate(45deg);
+			-ms-transform: translateY(8px) rotate(45deg);
+			-o-transform: translateY(8px) rotate(45deg);
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		&:nth-child(3) {
+			-webkit-transform: translateY(-8px) rotate(-45deg);
+			-ms-transform: translateY(-8px) rotate(-45deg);
+			-o-transform: translateY(-8px) rotate(-45deg);
+			transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+}*/
 #mobile-menu.is-active .bar:nth-child(2) {
   opacity: 0;
 }
@@ -1475,7 +1497,7 @@ section p a:hover {
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
   /* MOBILE NAVIGATION */
-  .navbar .logo {
+  .navbar span {
     margin-left: 1rem;
     font-size: 1.3rem;
   }

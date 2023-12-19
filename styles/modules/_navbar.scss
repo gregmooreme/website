@@ -32,7 +32,7 @@
         margin-left: 20px;
 	}
 
-	.logo {
+	span {
 		font-family: "Rock Salt", handwriting;
 		font-size: 1em;
 		font-weight: 400;
@@ -113,7 +113,7 @@
 		}
 	}
 }
-
+/*
 #mobile-menu.is-active {
 	.bar {
 		&:nth-child(2) {
@@ -134,7 +134,24 @@
 			transform: translateY(-8px) rotate(-45deg);
 		}
 	}
-}
+}*/
+#mobile-menu.is-active .bar:nth-child(2){
+	opacity: 0;
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(1){
+	-webkit-transform: translateY(8px) rotate(45deg);
+	-ms-transform: translateY(8px) rotate(45deg);
+	-o-transform: translateY(8px) rotate(45deg);
+	transform: translateY(8px) rotate(45deg);
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(3){
+	-webkit-transform: translateY(-8px) rotate(-45deg);
+	-ms-transform: translateY(-8px) rotate(-45deg);
+	-o-transform: translateY(-8px) rotate(-45deg);
+	transform: translateY(-8px) rotate(-45deg);
+  }
 
 /* Media Queries */
 
@@ -143,7 +160,7 @@
   /* MOBILE NAVIGATION */
 	.navbar {
 
-	.logo {
+	span {
 		margin-left: 1rem;
 		font-size: 1.3rem;
 	}
