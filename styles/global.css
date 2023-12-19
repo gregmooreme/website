@@ -1372,7 +1372,7 @@ section p a:hover {
   margin-left: 20px;
 }
 
-.navbar span {
+.navbar .logo {
   font-family: "Rock Salt", handwriting;
   font-size: 1em;
   font-weight: 400;
@@ -1380,17 +1380,17 @@ section p a:hover {
   margin-left: 3rem;
 }
 
-.navbar span a {
+.navbar .logo a {
   text-decoration: none;
   color: #0085ef;
 }
 
-.navbar span a:hover {
+.navbar .logo a:hover {
   color: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
-  .navbar span a {
+  .navbar .logo a {
     color: white;
   }
 }
@@ -1475,7 +1475,7 @@ section p a:hover {
 /* Media Queries */
 @media only screen and (max-width: 48rem) {
   /* MOBILE NAVIGATION */
-  .navbar span {
+  .navbar .logo {
     margin-left: 1rem;
     font-size: 1.3rem;
   }
