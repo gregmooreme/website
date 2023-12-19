@@ -1366,7 +1366,7 @@ section p a:hover {
 /* NAVIGATION */
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   align-content: center;
   height: 75px;
   overflow: hidden;
@@ -1461,15 +1461,15 @@ section p a:hover {
   }
 }
 
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
 #mobile-menu.is-active .bar:nth-child(1) {
   -webkit-transform: translateY(8px) rotate(45deg);
   -ms-transform: translateY(8px) rotate(45deg);
   -o-transform: translateY(8px) rotate(45deg);
   transform: translateY(8px) rotate(45deg);
-}
-
-#mobile-menu.is-active .bar:nth-child(2) {
-  opacity: 0;
 }
 
 #mobile-menu.is-active .bar:nth-child(3) {
