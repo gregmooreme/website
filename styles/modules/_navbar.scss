@@ -6,18 +6,13 @@
 	position: sticky;
 	top: 0;
 	z-index: 2;
+	border-bottom: 6px solid #0085ef;
 
 	// Dark Mode!
 	@media (prefers-color-scheme: dark) {
 		border-bottom: 6px solid #0085ef;
 		background-color: #2E3440;
 		color: white;
-	}
-	@media (prefers-color-scheme: light) {
-		//box-shadow: 0 0 3px 1px #666;
-		border-bottom: 6px solid #0085ef;
-		background-color: $light-bg;
-		color: black;
 	}
 }
 
@@ -36,7 +31,7 @@
         justify-self: start;
         margin-left: 20px;
 	}
-	
+
 	span {
 		font-family: "Rock Salt", handwriting;
 		font-size: 1em;
@@ -67,6 +62,7 @@
 		margin-right: 3rem;
         justify-self: end;
     }
+}
 
     .nav-item a {
         color: $font-color;
@@ -89,7 +85,7 @@
 				color: white;
 			}
     }
-}
+
 
 /* MOBILE MENU & ANIMATION */
 
@@ -145,45 +141,50 @@
 @media only screen and (max-width: 48rem) {
   
   /* MOBILE NAVIGATION */
-     .navbar {
+	.navbar {
 
-		span {
-			margin-left: 1rem;
-			font-size: 1.3rem;
+	span {
+		margin-left: 1rem;
+		font-size: 1.3rem;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		justify-content: start;
+		background-color: $light-bg;
+		top: 70px;
+		width: 100%;
+		height: calc(100vh - 50px);
+		transform: translate(101%); /* positive = slide from right, negative = slide from left */
+		transition: all 0.3s ease-in-out; /* slow animation down */
+		text-align: center;
+		overflow: hidden;
+		margin: 0;
+		
+		// Dark Mode!
+		@media (prefers-color-scheme: dark) {
+			background-color: #2E3440;
+			color: white;
 		}
-
-		ul {
-			display: flex;
-			flex-direction: column;
-			position: fixed;
-			justify-content: start;
-			top: 70px;
-			width: 100%;
-			height: calc(100vh - 50px);
-			transform: translate(101%); /* positive = slide from right, negative = slide from left */
-			transition: all 0.3s ease-in-out; /* slow animation down */
-			text-align: center;
-			overflow: hidden;
-			margin: 0;
-			
-			// Dark Mode!
-			@media (prefers-color-scheme: dark) {
-				background-color: #2E3440;
-				color: white;
-			}
+		@media (prefers-color-scheme: light) {
+			background-color: $light-bg;
 		}
 	}
 
-	.navbar li {
-		padding: 15px;
-    
-        &:first-child {
-	    	margin-top: 50px;
-	    }
 
-        a {
-            font-size: 1.5rem;
-        }
+	li {
+		padding: 15px;
+	
+			&:first-child {
+				margin-top: 50px;
+			}
+
+			a {
+				font-size: 1.5rem;
+			}
+		}
 	}
 
 	.menu-toggle, .bar {
