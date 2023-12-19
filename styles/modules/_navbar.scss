@@ -111,6 +111,7 @@
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
 
+		// Dark Mode!
 		@media (prefers-color-scheme: dark) {
 			background-color: white;
 		}
@@ -144,33 +145,32 @@
 @media only screen and (max-width: 48rem) {
   
   /* MOBILE NAVIGATION */
-     .navbar span {
-		 margin-left: 1rem;
-		 font-size: 1.3rem;
-	 }
+     .navbar {
 
-	.navbar ul {
-		display: flex;
-		flex-direction: column;
-		position: fixed;
-		justify-content: start;
-		top: 70px;
-		width: 100%;
-		height: calc(100vh - 50px);
-        transform: translate(101%); /* positive = slide from right, negative = slide from left */
-        transition: all 0.3s ease-in-out; /* slow animation down */
-		text-align: center;
-        overflow: hidden;
-		margin: 0;
-		
-		// Dark Mode!
-		@media (prefers-color-scheme: dark) {
-			background-color: #2E3440;
-			color: white;
+		span {
+			margin-left: 1rem;
+			font-size: 1.3rem;
 		}
-		@media (prefers-color-scheme: light) {
-			background-color: $light-bg;
-			color: black;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			justify-content: start;
+			top: 70px;
+			width: 100%;
+			height: calc(100vh - 50px);
+			transform: translate(101%); /* positive = slide from right, negative = slide from left */
+			transition: all 0.3s ease-in-out; /* slow animation down */
+			text-align: center;
+			overflow: hidden;
+			margin: 0;
+			
+			// Dark Mode!
+			@media (prefers-color-scheme: dark) {
+				background-color: #2E3440;
+				color: white;
+			}
 		}
 	}
 

@@ -1511,13 +1511,6 @@ section p a:hover {
   }
 }
 
-@media only screen and (max-width: 48rem) and (prefers-color-scheme: light) {
-  .navbar ul {
-    background-color: #efefef;
-    color: black;
-  }
-}
-
 @media only screen and (max-width: 48rem) {
   .navbar li {
     padding: 15px;
