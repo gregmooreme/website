@@ -20,7 +20,33 @@
   <!-- Photoswipe Styles -->
     <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
     <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
-  <!-- Shoelace Server Side Include Script -->
+  <!-- Photoswipe Server Side Includes script -->
+  <script>
+    function w3IncludeHTML() {
+      var z, i, a, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        if (z[i].getAttribute("w3-include-html")) {
+          a = z[i].cloneNode(false);
+          file = z[i].getAttribute("w3-include-html");
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+              a.removeAttribute("w3-include-html");
+              a.innerHTML = xhttp.responseText;
+    
+              z[i].parentNode.replaceChild(a, z[i]);
+              w3IncludeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+        }
+      }
+    }
+    </script>
+  <!-- Navigation Shoelace Server Side Include Script -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/components/include/include.js"></script>
 </head>
 <body>
