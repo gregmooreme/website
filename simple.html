@@ -17,22 +17,10 @@
 
   <!-- Global Styles -->
     <link rel="stylesheet" href="styles/global.css">
+  
   <!-- Simple Lightbox Styles -->
     <link rel="stylesheet" href="styles/simple-lightbox.css">
 
-    <style>
-      .gallery a img {
-            float: left;
-            width: 25%;
-            height: auto;
-            -webkit-transition: -webkit-transform .15s ease;
-            -moz-transition: -moz-transform .15s ease;
-            -o-transition: -o-transform .15s ease;
-            -ms-transition: -ms-transform .15s ease;
-            transition: transform .15s ease;
-            position: relative;
-        }
-    </style>
   <!-- Navigation Shoelace Server Side Include Script -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/components/include/include.js"></script>
 </head>
@@ -69,12 +57,22 @@
         <section class="container grid">
           <div class="column-xs-12">
             <div class="gallery">
-              <a href="img/tampa/xl/tampa-xl-9.jpg"><img src="img/tampa/sm/tampa-sm-9.jpg" alt="" title=""/></a>
-              <a href="img/tampa/xl/tampa-xl-2.jpg"><img src="img/tampa/sm/tampa-sm-2.jpg" alt="" title=""/></a>
-              <a href="img/tampa/xl/tampa-xl-4.jpg"><img src="img/tampa/sm/tampa-sm-4.jpg" alt="" title=""/></a>
-              <a href="img/tampa/xl/tampa-xl-3.jpg"><img src="img/tampa/sm/tampa-sm-3.jpg" alt="" title=""/></a>
-              <a href="img/tampa/xl/tampa-xl-5.jpg"><img src="img/tampa/sm/tampa-sm-5.jpg" alt="" title=""/></a>
-              <a href="img/tampa/xl/tampa-xl-6.jpg"><img src="img/tampa/sm/tampa-sm-6.jpg" alt="" title=""/></a>
+               <div class="photos-grid photos-grid--style-grid">
+              <a href="img/tampa/xl/tampa-xl-9.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-9.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-2.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-2.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-4.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-4.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-3.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-3.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-5.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-5.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-6.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-6.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-8.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-8.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-10.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-10.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-1.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-1.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-11.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-11.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-12.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-12.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-14.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-14.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-13.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-13.jpg" alt="" title="" loading="lazy"/></a>
+              <a href="img/tampa/xl/tampa-xl-15.jpg" class="photos-grid__item"><img src="img/tampa/sm/tampa-sm-15.jpg" alt="" title="" loading="lazy"/></a>
+              </div>
             </div>
           </div>
         </section>
@@ -94,15 +92,16 @@
      });
   </script>
 
-<!-- Gallery Grid Calculator 
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="js/gallery-grid.js" charset="utf-8"></script> -->
-
 <!-- Simple Lightbox -->
   <script src="js/simple-lightbox.js" charset="utf-8"></script>
+  <script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
+  </script>
 
-<!-- Lazy Load
-  <script src="js/lazyload.min.js" charset="utf-8"></script> -->
+<!-- Lazy Load -->
+  <script src="js/lazyload.min.js" charset="utf-8"></script>
 
 <!-- Analytics via GoatCounter -->
 <script src="{{{scriptURL}}}" type="text/javascript"></script>
