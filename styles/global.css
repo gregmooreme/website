@@ -1531,7 +1531,6 @@ section p a:hover {
 /* Full-Width Image Header */
 .fw-header {
   width: 100%;
-  height: 100vh;
   min-height: 350px;
   background-size: cover;
   display: flex;

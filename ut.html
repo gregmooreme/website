@@ -17,35 +17,10 @@
 
   <!-- Global Styles -->
     <link rel="stylesheet" href="styles/global.css">
-  <!-- Photoswipe Styles -->
-    <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
-  <!-- Photoswipe Server Side Includes script -->
-  <script>
-    function w3IncludeHTML() {
-      var z, i, a, file, xhttp;
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("w3-include-html")) {
-          a = z[i].cloneNode(false);
-          file = z[i].getAttribute("w3-include-html");
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
-              a.removeAttribute("w3-include-html");
-              a.innerHTML = xhttp.responseText;
-    
-              z[i].parentNode.replaceChild(a, z[i]);
-              w3IncludeHTML();
-            }
-          }      
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          return;
-        }
-      }
-    }
-    </script>
+  
+  <!-- Simple Lightbox Styles -->
+  <link rel="stylesheet" href="styles/simple-lightbox.css">
+
   <!-- Navigation Shoelace Server Side Include Script -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/components/include/include.js"></script>
 </head>
@@ -80,49 +55,15 @@
 
         <section class="container grid">
           <div class="column-xs-12">
-            <div class="gallery-grid" data-pswp>
-                <div class="item">
-                  <div class="content">
-                  <a href="img/ut/xl/ut-xl-1.jpg">
-                    <img src="img/ut/sm/ut-sm-1.jpg" loading="lazy">
-                  </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="content">
-                  <a href="img/ut/xl/ut-xl-3.jpg">
-                    <img src="img/ut/sm/ut-sm-3.jpg" loading="lazy">
-                  </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="content">
-                  <a href="img/ut/xl/ut-xl-4.jpg">
-                    <img src="img/ut/sm/ut-sm-4.jpg" loading="lazy">
-                  </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="content">
-                  <a href="img/ut/xl/ut-xl-2.jpg">
-                    <img src="img/ut/sm/ut-sm-2.jpg" loading="lazy">
-                  </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="content">
-                  <a href="img/ut/xl/ut-xl-5.jpg">
-                    <img src="img/ut/sm/ut-sm-5.jpg" loading="lazy">
-                  </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="content">
-                  <a href="img/ut/xl/ut-xl-6.jpg">
-                    <img src="img/ut/sm/ut-sm-6.jpg" loading="lazy">
-                  </a>
-                  </div>
-                </div>
+            <div class="gallery">
+               <div class="photos-grid photos-grid--style-grid">
+                <a href="img/ut/xl/ut-xl-1.jpg" class="photos-grid__item"><img src="img/ut/sm/ut-sm-1.jpg" alt="" loading="lazy"/></a>
+                <a href="img/ut/xl/ut-xl-6.jpg" class="photos-grid__item"><img src="img/ut/sm/ut-sm-6.jpg" alt="" loading="lazy"/></a>
+                <a href="img/ut/xl/ut-xl-5.jpg" class="photos-grid__item"><img src="img/ut/sm/ut-sm-5.jpg" alt="" loading="lazy"/></a>
+                <a href="img/ut/xl/ut-xl-2.jpg" class="photos-grid__item"><img src="img/ut/sm/ut-sm-2.jpg" alt="" loading="lazy"/></a>
+                <a href="img/ut/xl/ut-xl-4.jpg" class="photos-grid__item"><img src="img/ut/sm/ut-sm-4.jpg" alt="" loading="lazy"/></a>
+                <a href="img/ut/xl/ut-xl-3.jpg" class="photos-grid__item"><img src="img/ut/sm/ut-sm-3.jpg" alt="" loading="lazy"/></a>
+              </div>
             </div>
           </div>
         </section>
@@ -142,37 +83,17 @@
      });
   </script>
 
-<!-- Gallery Grid Calculator -->
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="js/gallery-grid.js" charset="utf-8"></script>
-
-<!-- PhotoSwipe & Photoswipe Simplify -->
-  <script src="js/photoswipe.min.js" charset="utf-8"></script>
-  <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
-  <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
-  <script src="js/lazyload.min.js" charset="utf-8"></script>
-  <script charset="utf-8">
-    w3IncludeHTML();
-
-    photoswipeSimplify.init({
-                  history: false,
-                  bgOpacity: .7,
-                  zoomEl: false,
-                  shareEl: false,
-                  fullscreenEl: false,
-                  closeEl: false,
-                      captionEl: false,
-                      barsSize: {top:44, bottom:44}
-               });
-               
-          var lazyLoadInstance = new LazyLoad({
-              elements_selector: "img"
-              });
-
-              var lazyiFrame = new LazyLoad({
-                  elements_selector: "iframe"
-              });
+<!-- Simple Lightbox -->
+  <script src="js/simple-lightbox.js" charset="utf-8"></script>
+  <script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
   </script>
+
+<!-- Lazy Load -->
+  <script src="js/lazyload.min.js" charset="utf-8"></script>
+
 <!-- Analytics via GoatCounter -->
 <script src="{{{scriptURL}}}" type="text/javascript"></script>
 <script>

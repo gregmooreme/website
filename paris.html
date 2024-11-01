@@ -17,35 +17,10 @@
 
   <!-- Global Styles -->
     <link rel="stylesheet" href="styles/global.css">
-  <!-- Photoswipe Styles -->
-    <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
-  <!-- Photoswipe Server Side Includes script -->
-  <script>
-    function w3IncludeHTML() {
-      var z, i, a, file, xhttp;
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("w3-include-html")) {
-          a = z[i].cloneNode(false);
-          file = z[i].getAttribute("w3-include-html");
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
-              a.removeAttribute("w3-include-html");
-              a.innerHTML = xhttp.responseText;
-    
-              z[i].parentNode.replaceChild(a, z[i]);
-              w3IncludeHTML();
-            }
-          }      
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          return;
-        }
-      }
-    }
-    </script>
+  
+  <!-- Simple Lightbox Styles -->
+  <link rel="stylesheet" href="styles/simple-lightbox.css">
+
   <!-- Navigation Shoelace Server Side Include Script -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/components/include/include.js"></script>
 </head>
@@ -81,248 +56,46 @@
 
         <section class="container grid">
           <div class="column-xs-12">
-            <div class="gallery-grid" data-pswp>
-              <div class="item">
-                <div class="content">
-                  <a href="img/paris/xl/paris-2018_1920-07.jpg">
-                    <img src="img/paris/sm/paris-2018_600-07.jpg" loading="lazy">
-                  </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-03.jpg">
-                  <img src="img/paris/sm/paris-2018_600-03.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-06.jpg">
-                  <img src="img/paris/sm/paris-2018_600-06.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-05.jpg">
-                  <img src="img/paris/sm/paris-2018_600-05.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-04.jpg">
-                  <img src="img/paris/sm/paris-2018_600-04.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-12.jpg">
-                  <img src="img/paris/sm/paris-2018_600-12.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-08.jpg">
-                  <img src="img/paris/sm/paris-2018_600-08.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-09.jpg">
-                  <img src="img/paris/sm/paris-2018_600-09.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-10.jpg">
-                  <img src="img/paris/sm/paris-2018_600-10.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-11.jpg">
-                  <img src="img/paris/sm/paris-2018_600-11.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-13.jpg">
-                  <img src="img/paris/sm/paris-2018_600-13.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-14.jpg">
-                  <img src="img/paris/sm/paris-2018_600-14.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-15.jpg">
-                  <img src="img/paris/sm/paris-2018_600-15.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-16.jpg">
-                  <img src="img/paris/sm/paris-2018_600-16.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-17.jpg">
-                  <img src="img/paris/sm/paris-2018_600-17.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-18.jpg">
-                  <img src="img/paris/sm/paris-2018_600-18.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-19.jpg">
-                  <img src="img/paris/sm/paris-2018_600-19.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-20.jpg">
-                  <img src="img/paris/sm/paris-2018_600-20.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-21.jpg">
-                  <img src="img/paris/sm/paris-2018_600-21.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-22.jpg">
-                  <img src="img/paris/sm/paris-2018_600-22.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-23.jpg">
-                  <img src="img/paris/sm/paris-2018_600-23.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-24.jpg">
-                  <img src="img/paris/sm/paris-2018_600-24.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-25.jpg">
-                  <img src="img/paris/sm/paris-2018_600-25.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-26.jpg">
-                  <img src="img/paris/sm/paris-2018_600-26.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-27.jpg">
-                  <img src="img/paris/sm/paris-2018_600-27.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-28.jpg">
-                  <img src="img/paris/sm/paris-2018_600-28.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-29.jpg">
-                  <img src="img/paris/sm/paris-2018_600-29.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-30.jpg">
-                  <img src="img/paris/sm/paris-2018_600-30.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-31.jpg">
-                  <img src="img/paris/sm/paris-2018_600-31.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-32.jpg">
-                  <img src="img/paris/sm/paris-2018_600-32.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-33.jpg">
-                  <img src="img/paris/sm/paris-2018_600-33.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-34.jpg">
-                  <img src="img/paris/sm/paris-2018_600-34.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-35.jpg">
-                  <img src="img/paris/sm/paris-2018_600-35.jpg" loading="lazy">
-                </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                <a href="img/paris/xl/paris-2018_1920-36.jpg">
-                  <img src="img/paris/sm/paris-2018_600-36.jpg" loading="lazy">
-                </a>
-                </div>
+            <div class="gallery">
+               <div class="photos-grid photos-grid--style-grid">
+                <a href="img/paris/xl/paris-xl-07.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-07.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-03.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-03.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-06.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-06.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-05.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-05.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-04.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-04.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-12.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-12.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-08.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-08.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-09.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-09.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-10.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-10.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-11.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-11.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-13.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-13.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-14.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-14.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-15.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-15.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-16.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-16.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-17.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-17.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-18.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-18.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-19.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-19.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-20.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-20.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-21.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-21.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-22.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-22.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-23.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-23.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-24.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-24.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-25.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-25.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-26.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-26.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-27.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-27.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-28.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-28.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-29.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-29.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-30.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-30.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-31.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-31.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-32.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-32.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-33.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-33.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-34.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-34.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-36.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-36.jpg" alt="" loading="lazy"/></a>
+                <a href="img/paris/xl/paris-xl-35.jpg" class="photos-grid__item"><img src="img/paris/sm/paris-sm-35.jpg" alt="" loading="lazy"/></a>
               </div>
             </div>
-            </div>
-          </section>
+          </div>
+        </section>
 
     </main>
     
@@ -339,37 +112,17 @@
      });
   </script>
 
-<!-- Gallery Grid Calculator -->
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="js/gallery-grid.js" charset="utf-8"></script>
+<!-- Simple Lightbox -->
+<script src="js/simple-lightbox.js" charset="utf-8"></script>
+<script>
+  (function() {
+      var $gallery = new SimpleLightbox('.gallery a', {});
+  })();
+</script>
 
-<!-- PhotoSwipe & Photoswipe Simplify -->
-  <script src="js/photoswipe.min.js" charset="utf-8"></script>
-  <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
-  <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
-  <script src="js/lazyload.min.js" charset="utf-8"></script>
-  <script charset="utf-8">
-    w3IncludeHTML();
+<!-- Lazy Load -->
+<script src="js/lazyload.min.js" charset="utf-8"></script>
 
-    photoswipeSimplify.init({
-                  history: false,
-                  bgOpacity: .7,
-                  zoomEl: false,
-                  shareEl: false,
-                  fullscreenEl: false,
-                  closeEl: false,
-                      captionEl: false,
-                      barsSize: {top:44, bottom:44}
-               });
-               
-          var lazyLoadInstance = new LazyLoad({
-              elements_selector: "img"
-              });
-
-              var lazyiFrame = new LazyLoad({
-                  elements_selector: "iframe"
-              });
-  </script>
 <!-- Analytics via GoatCounter -->
 <script src="{{{scriptURL}}}" type="text/javascript"></script>
 <script>
