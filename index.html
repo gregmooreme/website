@@ -18,9 +18,7 @@
 
   <!-- Global Styles -->
     <link rel="stylesheet" href="styles/global.css">
-  <!-- Photoswipe Styles -->
-    <link rel="stylesheet" href="styles/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="styles/photoswipe/default-skin.css">
+
   <!-- Navigation Shoelace Server Side Include Script -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/components/include/include.js"></script>
 </head>
@@ -112,37 +110,6 @@
          $(".nav").toggleClass("mobile-nav");
          $(this).toggleClass("is-active");
      });
-  </script>
-
-<!-- Gallery Grid Calculator -->
-  <script src="js/gallery-grid.js" charset="utf-8"></script>
-
-<!-- PhotoSwipe & Photoswipe Simplify -->
-  <script src="js/photoswipe.min.js" charset="utf-8"></script>
-  <script src="js/photoswipe-ui-default.min.js" charset="utf-8"></script>
-  <script src="js/photoswipe-simplify.min.js" charset="utf-8"></script>
-  <script src="js/lazyload.min.js" charset="utf-8"></script>
-  <script charset="utf-8">
-    w3IncludeHTML();
-
-    photoswipeSimplify.init({
-                  history: false,
-                  bgOpacity: .7,
-                  zoomEl: false,
-                  shareEl: false,
-                  fullscreenEl: false,
-                  closeEl: false,
-                      captionEl: false,
-                      barsSize: {top:44, bottom:44}
-               });
-               
-          var lazyLoadInstance = new LazyLoad({
-              elements_selector: "img"
-              });
-
-              var lazyiFrame = new LazyLoad({
-                  elements_selector: "iframe"
-              });
   </script>
   
 <!-- Analytics via GoatCounter -->
