@@ -57,11 +57,13 @@
 
     ul {
         list-style: none;
-        display: grid;
-        grid-template-columns: repeat(4,1fr); /* 1st number = number of links */
-		grid-column-gap: 0.5rem;
+		display: flex;
+		gap: 1.5rem;
+        //display: grid;
+        //grid-template-columns: repeat(4,1fr); /* 1st number = number of links */
+		//grid-column-gap: 0.5rem;
 		margin-right: 3rem;
-        justify-self: end;
+        //justify-self: end;
     }
 }
 
